@@ -1,0 +1,37 @@
+{
+  "model_version": "ENGAGEVISION_MOE_EEL_V1",
+  "target_version": "EEL_V1_W40_C60_BOOTSTRAP_HAC",
+  "bundle_path": "model/final_engagevision_eel_moe_bundle.pkl",
+  "bundle_sha256": "10e5ce9ebbdc8a4cb35f05e1ca27a45cb9c50983e6423e929facdc9d81cc5f02",
+  "bundle_size_bytes": 1009179102,
+  "created_at": "2026-08-03T16:20:10.697813+00:00",
+  "feature_count": 935,
+  "expert_count": 12,
+  "global_models": [
+    "Random Forest",
+    "Extra Trees",
+    "XGBoost",
+    "CatBoost"
+  ],
+  "test_metrics": {
+    "accuracy": 0.6516625197919023,
+    "precision": 0.5732009925558312,
+    "recall": 0.8889074786682282,
+    "specificity": 0.45704090035684874,
+    "f1": 0.696969696969697,
+    "fbeta_1_25": 0.7316485797486977,
+    "roc_auc": 0.7778436610171546,
+    "pr_auc": 0.7181472694820284,
+    "brier_score": 0.19087490629100018,
+    "ece": 0.013990177048509259,
+    "TN": 3330,
+    "FP": 3956,
+    "FN": 664,
+    "TP": 5313
+  },
+  "rollback": {
+    "legacy_model_version": "LEGACY_V1",
+    "legacy_bundle_relative_path": "legacy/final_model_bundle_legacy_v1.pkl",
+    "legacy_bundle_sha256": "d51dc85f2c271cf7ac7003dc353520036ef41e6cdd5f4c71d10889c659205e97"
+  }
+}

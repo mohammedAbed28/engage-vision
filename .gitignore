@@ -1,0 +1,51 @@
+# Secrets — never commit
+.env
+.env.*
+!.env.example
+backend/.env
+frontend/.env
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.venv/
+venv/
+env/
+
+# Node / Expo
+node_modules/
+.expo/
+dist/
+web-build/
+coverage/
+*.tsbuildinfo
+npm-debug.*
+yarn-debug.*
+yarn-error.*
+
+# OS / editor
+.DS_Store
+*.log
+.vscode/
+.idea/
+
+# Backend runtime
+backend/outputs/
+catboost_info/
+
+# Course submission pack (kept local)
+submission_materials/
+
+# Local reference only
+archive/
+
+# Trained model binaries (too large for GitHub; keep them on your machine)
+*.pkl
+model/checkpoints/
+model/tmp/
+model/training_output/

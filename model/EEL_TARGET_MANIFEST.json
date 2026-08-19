@@ -1,0 +1,38 @@
+{
+  "target_version": "EEL_V1_W40_C60_BOOTSTRAP_HAC",
+  "rows": 88419,
+  "unique_post_ids": 88419,
+  "source_values": "/Users/hmode/Downloads/files/engagement_predictor/ניסוי/M2_FOCUSED_OPTIMIZATION_STUDY/targets/A0_FROZEN_M2_REFERENCE_TARGET_VALUES.csv.gz",
+  "source_values_sha256": "c9866e6ebe135788bab263cd3fcfae7229b26d6cbe7a59a5f2ad524545990740",
+  "selection": "/Users/hmode/Downloads/files/engagement_predictor/ניסוי/M2_FOCUSED_OPTIMIZATION_STUDY/targets/FINAL_SELECTED_M2_TARGET.json",
+  "selection_sha256": "25fb721b522037032fa36058cf92e2d172e6561cc30cd4ea820c958f1c2a0c72",
+  "split_manifest": "/Users/hmode/Downloads/files/engagement_predictor/ניסוי/TARGET_SCORE_THREE_METHODS_THREE_MODELS/EXPERIMENT_SPLIT_MANIFEST.csv",
+  "split_manifest_sha256": "0892f4e4fe692108cc88c8c443f6f39d22147b1580afd73a18d2f0ba17fc5f09",
+  "sorted_post_id_sha256": "28f623f8c2fbb6c1c6b26986ffa18b9376e84b8998c30a601e3100c3c7ab24bc",
+  "output_gzip": "/Users/hmode/Documents/Codex/EngageVision_Final_EEL/model/eel_target_values.csv.gz",
+  "output_gzip_sha256": "13fd2f02d02b51222ac2ed1d9bc312db9ed4b22e8de949efc6ea182b2ee76395",
+  "sql_csv": "/Users/hmode/Documents/Codex/EngageVision_Final_EEL/sql/eel_target_values.csv",
+  "sql_csv_sha256": "9875134ca168d685a711f3933a11c2ee3a06571e8f767eb0f4d15df1ac52e3e9",
+  "split_statistics": [
+    {
+      "split": "test",
+      "rows": 13263,
+      "high": 5977,
+      "high_rate": 0.45065219030385284
+    },
+    {
+      "split": "train",
+      "rows": 61893,
+      "high": 27974,
+      "high_rate": 0.45197356728547655
+    },
+    {
+      "split": "validation",
+      "rows": 13263,
+      "high": 5990,
+      "high_rate": 0.4516323607027068
+    }
+  ],
+  "formula": "0.40 * like_percentile_eel + 0.60 * comment_percentile_eel",
+  "label_rule": "score >= frozen per-account bootstrap-median HAC boundary"
+}

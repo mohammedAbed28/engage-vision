@@ -1,0 +1,43 @@
+rules_version = '2';
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+    match /users/{userId} {
+      function isOwner() {
+        return request.auth != null && request.auth.uid == userId;
+      }
+
+      function hasSafeRegistrationShape() {
+        return request.resource.data.keys().hasOnly([
+          'uid',
+          'fullName',
+          'email',
+          'phoneNumber',
+          'registrationMethod',
+          'createdAt'
+        ])
+        && request.resource.data.uid == userId
+        && request.resource.data.fullName is string
+        && request.resource.data.fullName.size() >= 2
+        && request.resource.data.fullName.size() <= 120
+        && (
+          request.resource.data.registrationMethod == 'email'
+          || request.resource.data.registrationMethod == 'phone'
+        );
+      }
+
+      allow create: if isOwner() && hasSafeRegistrationShape();
+      allow read: if isOwner();
+      allow update: if isOwner()
+        && hasSafeRegistrationShape()
+        && request.resource.data.uid == resource.data.uid
+        && request.resource.data.createdAt == resource.data.createdAt;
+      allow delete: if isOwner();
+    }
+
+    match /{document=**} {
+      allow read, write: if false;
+    }
+  }
+}
+

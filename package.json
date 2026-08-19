@@ -1,0 +1,14 @@
+{
+  "name": "engagevision-final-eel",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Final isolated EngageVision Expected Engagement Lift release",
+  "scripts": {
+    "frontend": "npm --prefix frontend start",
+    "frontend:web": "npm --prefix frontend run web",
+    "typecheck": "npm --prefix frontend run typecheck",
+    "test": "python3 -m pytest -q",
+    "backend": "python3 -m uvicorn backend.server:api --host 0.0.0.0 --port 8048"
+  }
+}
+

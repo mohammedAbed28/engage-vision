@@ -1,0 +1,46 @@
+{
+  "expo": {
+    "name": "EngageVision Research",
+    "slug": "engagevision-ai",
+    "version": "1.5.0",
+    "scheme": "engagevision",
+    "orientation": "portrait",
+    "icon": "./assets/engagevision-icon-1024.png",
+    "userInterfaceStyle": "dark",
+    "backgroundColor": "#05090D",
+    "ios": {
+      "bundleIdentifier": "com.engagevision.ai",
+      "buildNumber": "6",
+      "supportsTablet": false,
+      "backgroundColor": "#05090D"
+    },
+    "android": {
+      "package": "com.engagevision.ai",
+      "versionCode": 6,
+      "edgeToEdgeEnabled": true,
+      "blockedPermissions": [
+        "android.permission.RECORD_AUDIO"
+      ],
+      "adaptiveIcon": {
+        "backgroundColor": "#05090D",
+        "foregroundImage": "./assets/engagevision-icon-1024.png"
+      },
+      "predictiveBackGestureEnabled": true
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "extra": {
+      "releaseChannel": "research-auth-final-v10"
+    },
+    "plugins": [
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "Choose a post image to preview and improve before publishing.",
+          "microphonePermission": false
+        }
+      ]
+    ]
+  }
+}
